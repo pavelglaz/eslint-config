@@ -1,6 +1,6 @@
 {
     "name": "@pavelglaz/eslint-config",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "description": "common eslint config",
     "author": "Pavelglaz",
     "main": "index.js",
