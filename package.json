@@ -1,0 +1,49 @@
+{
+    "name": "@pavelglaz/eslint-config",
+    "version": "0.0.0",
+    "description": "common eslint config",
+    "author": "Pavelglaz",
+    "main": "index.js",
+    "scripts": {
+        "find-circulars": "madge --circular --extensions ts ./",
+        "lint": "prettier --check .",
+        "lint:fix": "prettier --write .",
+        "lint:lockfile": "lockfile-lint --path package-lock.json --allowed-hosts registry.npmjs.org --validate-https",
+        "semantic-release": "semantic-release"
+    },
+    "commitlint": {
+        "extends": "@pavelglaz/configs/dist/commitlint"
+    },
+    "prettier": "./prettier.js",
+    "release": {
+        "extends": "@pavelglaz/configs/dist/semantic-release/package"
+    },
+    "dependencies": {
+        "@pavelglaz/eslint-plugin": "0.1.0",
+        "@typescript-eslint/eslint-plugin": "7.8.0",
+        "@typescript-eslint/parser": "7.8.0",
+        "eslint-config-airbnb-base": "15.0.0",
+        "eslint-config-airbnb-typescript": "18.0.0",
+        "eslint-config-prettier": "9.1.0",
+        "eslint-plugin-anti-trojan-source": "1.1.1",
+        "eslint-plugin-import": "2.29.1",
+        "eslint-plugin-jest": "28.8.3",
+        "eslint-plugin-n": "17.6.0",
+        "eslint-plugin-prettier": "5.2.1",
+        "eslint-plugin-promise": "6.1.1",
+        "eslint-plugin-regexp": "2.5.0",
+        "eslint-plugin-unicorn": "53.0.0"
+    },
+    "devDependencies": {
+        "@pavelglaz/configs": "1.2.0",
+        "lockfile-lint": "4.13.2",
+        "madge": "7.0.0",
+        "semantic-release": "24.2.0"
+    },
+    "peerDependencies": {
+        "eslint": "^8.57.1",
+        "prettier": "^3.2.5"
+    },
+    "repository": "https://github.com/pavelglaz/eslint-config.git",
+    "license": "SEE LICENSE IN LICENSE.md"
+}
